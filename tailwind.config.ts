@@ -90,6 +90,18 @@ export default {
                 'card-slide': {
                     '0%': { transform: 'translateX(100%)', opacity: '0' },
                     '100%': { transform: 'translateX(0)', opacity: '1' }
+                },
+                'blob-move': {
+                    '0%, 100%': {
+                        borderRadius: '60% 40% 30% 70%/60% 30% 70% 40%'
+                    },
+                    '50%': {
+                        borderRadius: '30% 60% 70% 40%/50% 60% 30% 60%'
+                    }
+                },
+                'cursor-blink': {
+                    '0%, 100%': { opacity: '1' },
+                    '50%': { opacity: '0.5' }
                 }
 			},
 			animation: {
@@ -97,7 +109,9 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
                 'float': 'float 6s ease-in-out infinite',
                 'pulse-slow': 'pulse-slow 4s ease-in-out infinite',
-                'card-slide': 'card-slide 0.6s ease-out'
+                'card-slide': 'card-slide 0.6s ease-out',
+                'blob-move': 'blob-move 8s ease-in-out infinite',
+                'cursor-blink': 'cursor-blink 1.5s ease-in-out infinite'
 			},
             backgroundImage: {
                 'hero-gradient': 'linear-gradient(135deg, #D3E4FD 0%, #D6BCFA 100%)',

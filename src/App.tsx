@@ -7,6 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import BackgroundAnimation from "./components/BackgroundAnimation";
+import CursorAnimation from "./components/CursorAnimation";
 
 const queryClient = new QueryClient();
 
@@ -14,6 +16,8 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider defaultTheme="light" storageKey="flowboard-theme">
       <TooltipProvider>
+        <BackgroundAnimation />
+        <CursorAnimation />
         <Toaster />
         <Sonner />
         <BrowserRouter>

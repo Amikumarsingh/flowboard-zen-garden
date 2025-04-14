@@ -75,10 +75,17 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+    cursor: none;
   }
 
   html {
     @apply scroll-smooth;
+  }
+
+  /* Override cursor for interactive elements to ensure they're still clickable */
+  a, button, input, textarea, select, [role="button"], 
+  [tabindex]:not([tabindex="-1"]) {
+    @apply cursor-none;
   }
 }
 
@@ -94,5 +101,51 @@
   .neumorphic-sm {
     @apply bg-white dark:bg-gray-800 rounded-xl shadow-neumorphic-sm dark:shadow-neumorphic-sm-dark;
   }
+
+  .animated-gradient {
+    @apply bg-gradient-to-br from-zen-purple via-zen-blue to-zen-green bg-size-200 animate-gradient;
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-size-200 {
+  background-size: 200% 200%;
+}
+
+.animate-gradient {
+  animation: gradientMove 15s ease infinite;
+}
+
+/* Hide default cursor when custom cursor is active */
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
+/* But show default cursor on mobile/touch devices */
+@media (pointer: coarse) {
+  * {
+    cursor: auto !important;
+  }
+  .custom-cursor, .cursor-follower {
+    display: none !important;
+  }
+}
+
+/* Update Hero section with subtle movement */
+.hero-element {
+  transition: transform 0.3s ease-out;
 }
 
