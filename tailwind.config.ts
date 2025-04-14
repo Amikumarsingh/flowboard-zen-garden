@@ -59,7 +59,10 @@ export default {
                     green: '#F2FCE2',
                     blue: '#D3E4FD',
                     gray: '#F1F0FB',
-                    'sky-blue': '#33C3F0'
+                    'sky-blue': '#33C3F0',
+                    'dark-purple': '#6b5bb5',
+                    'dark-blue': '#2a466d',
+                    'dark-gray': '#2D2D35'
                 }
 			},
 			borderRadius: {
@@ -98,13 +101,19 @@ export default {
 			},
             backgroundImage: {
                 'hero-gradient': 'linear-gradient(135deg, #D3E4FD 0%, #D6BCFA 100%)',
+                'hero-gradient-dark': 'linear-gradient(135deg, #2a466d 0%, #6b5bb5 100%)',
                 'card-gradient': 'linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.6) 100%)',
-                'cta-gradient': 'linear-gradient(135deg, #9b87f5 0%, #33C3F0 100%)'
+                'card-gradient-dark': 'linear-gradient(135deg, rgba(45, 45, 53, 0.9) 0%, rgba(35, 35, 42, 0.6) 100%)',
+                'cta-gradient': 'linear-gradient(135deg, #9b87f5 0%, #33C3F0 100%)',
+                'cta-gradient-dark': 'linear-gradient(135deg, #6b5bb5 0%, #207a9e 100%)'
             },
             boxShadow: {
                 'neumorphic': '10px 10px 20px rgba(0, 0, 0, 0.05), -10px -10px 20px rgba(255, 255, 255, 0.8)',
+                'neumorphic-dark': '10px 10px 20px rgba(0, 0, 0, 0.3), -10px -10px 20px rgba(75, 75, 85, 0.2)',
                 'neumorphic-sm': '5px 5px 10px rgba(0, 0, 0, 0.05), -5px -5px 10px rgba(255, 255, 255, 0.8)',
-                'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)'
+                'neumorphic-sm-dark': '5px 5px 10px rgba(0, 0, 0, 0.3), -5px -5px 10px rgba(75, 75, 85, 0.2)',
+                'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+                'glass-dark': '0 8px 32px 0 rgba(0, 0, 0, 0.3)'
             }
 		}
 	},
